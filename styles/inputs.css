@@ -1,0 +1,71 @@
+div.button {
+    margin: 7px;
+    width: 10em;
+    height: 3em;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+div.button:before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    transition: 0.4s;
+    transform: scaleX(0);
+}
+
+div.button:after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-left: solid 2px;
+    border-right: solid 2px;
+    transition: 0.4s;
+    transform: scaleY(0);
+}
+
+div.button:hover:before,
+div.button:hover:after{
+    transform: scale(1);
+}
+
+select {
+    border: 1px solid #fff;
+    min-width: 10em;
+    height: 34px;
+    padding: 5px;
+    font-size: 16px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    text-align-last: center;
+}
+
+input[type="number"] {
+    text-align-last: center;
+    min-width: 10em;
+    font-size: 16px;
+}
+
+select:focus,
+select:active,
+input[type="number"]:focus,
+input[type="number"]:active {
+    outline: none;
+}
+
+select::-moz-focus-inner,
+input[type="number"]::-moz-focus-inner {
+    border: 0;
+}

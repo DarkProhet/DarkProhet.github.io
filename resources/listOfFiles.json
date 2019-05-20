@@ -1,0 +1,14 @@
+{
+  "html": {
+    "name": "HTML цвета",
+    "filePath" : "resources/htmlColors.json"
+  },
+  "english": {
+    "name": "Цвета на английском",
+    "filePath": "resources/englishColors.json"
+  },
+  "russian": {
+    "name": "Цвета на русском",
+    "filePath" : "resources/russianColors.json"
+  }
+}
