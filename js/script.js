@@ -116,10 +116,6 @@ function update()
         $(this).addClass("animate-level").dequeue();
     });
 
-    // TODO: Удалить
-    console.log("Заграданный цвет", randomColor);
-    //$("body").css("background-color", randomColor);
-
     generateColors();
     redraw(difficulty);
 }
@@ -169,31 +165,6 @@ function calculateError(selectedColor, currentColor)
     var b = Math.abs(selectedColor.b - currentColor.b);
 
     return ((r + g + b) / 3) * 100 / 255;
-}
-
-// TODO: Удалить
-function isHasColor(rgbColor)
-{
-    for(var i = 0; i < 150; i++)
-        for(var j = 0; j < 150; j++)
-        {
-            var data = context.getImageData(i, j, 1, 1).data;
-            if(rgbColor.r === data[0] && rgbColor.g === data[1] && rgbColor.b === data[2])
-            {
-                console.log("Такой цвет есть на canvas");
-                return;
-            }
-        }
-
-    console.log("Такого цвета нет на canvas");
-}
-
-// TODO: Удалить
-function printColorData(x, y, name) {
-    var data = context.getImageData(x, y, 1, 1).data;
-    var color = getRGB(data[0], data[1], data[2]);
-
-    console.log(name, color);
 }
 
 function endGame()
